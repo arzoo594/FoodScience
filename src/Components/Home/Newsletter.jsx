@@ -3,7 +3,7 @@ import ScrollReveal from "../ScrollReveal/ScrollReveal";
 const Newsletter = () => {
   return (
     <ScrollReveal>
-      <section className="mt-20 px-4 sm:px-6 lg:px-8">
+      <section className="my-20 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl rounded-[24px] bg-green-700 px-5 py-8 text-center">
           <h2 className="text-3xl font-bold text-white">
             Stay Updated with the Latest Food Science

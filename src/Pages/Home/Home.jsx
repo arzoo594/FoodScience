@@ -1,3 +1,4 @@
+import BmiCalculator from "../../Components/BmiCalculator/BmiCalculator";
 import Banner from "../../Components/Home/Banner";
 import CookingScience from "../../Components/Home/CookingScience";
 import FeatureTopic from "../../Components/Home/FeatureTopic";
@@ -6,7 +7,6 @@ import MythVsFact from "../../Components/Home/MythVsFact";
 import Newsletter from "../../Components/Home/Newsletter";
 import NutritionSection from "../../Components/Home/NutritionSection";
 import WhyTrustFoodScience from "../../Components/Home/WhyTrustFoodScience";
-import ScrollReveal from "../../Components/ScrollReveal/ScrollReveal";
 
 const Home = () => {
   return (
@@ -14,21 +14,13 @@ const Home = () => {
       <Banner />
       <FeatureTopic />
       <NutritionSection />
-      <ScrollReveal>
-        <FoodSafety />
-      </ScrollReveal>
-      <ScrollReveal>
-        <CookingScience />
-      </ScrollReveal>
-      <ScrollReveal>
-        <MythVsFact />
-      </ScrollReveal>
-      <ScrollReveal>
-        <WhyTrustFoodScience />
-      </ScrollReveal>
-      <ScrollReveal>
-        <Newsletter />
-      </ScrollReveal>
+      <FoodSafety />
+
+      <CookingScience />
+      <MythVsFact />
+      <WhyTrustFoodScience />
+      <Newsletter />
+      <BmiCalculator />
     </div>
   );
 };

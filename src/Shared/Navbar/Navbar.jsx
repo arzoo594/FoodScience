@@ -2,26 +2,28 @@ import { useState } from "react";
 import SocialIcon from "../../Components/SocialIcon.jsx/SocialIcon";
 import Navlink from "../../Components/Navlinks/Navlink";
 import { Link } from "react-router";
-
+import HealthCalculatorDropdown from "../../Components/HealthCalculatorDropdown/HealthCalculatorDropdown";
+import Logo from "../../Components/Logo/Logo";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      <div className="navbar sticky top-0 py-4  bg-base-100 shadow-sm  z-50">
+      <div className="navbar sticky top-0 py-6  bg-base-100 shadow-sm  z-50">
         <div className="navbar-start">
           <Link to={"/"} className="btn btn-ghost text-xl">
-            FoodScience
+            <Logo />
           </Link>
         </div>
 
         <div className="navbar-center hidden lg:flex">
           <ul className="menu text-[15px] font-semibold menu-horizontal px-6 gap-4">
-            <Navlink to={"/myth-fact"}>
-              <a className="">Myth vs Fact</a>
+            <Navlink to={"/"}>
+              <a className="">Home</a>
             </Navlink>
-            <Navlink to={"/cooking-science"}>
-              <a>Cooking Science</a>
+            <HealthCalculatorDropdown />
+            <Navlink to={"/blog"}>
+              <a>Blog</a>
             </Navlink>
             <Navlink to={"/food-safety"}>
               <a>Food Safety</a>
@@ -29,8 +31,11 @@ const Navbar = () => {
             <Navlink to={"/healthy-recipes"}>
               <a>Healthy Recipes</a>
             </Navlink>
-            <Navlink to={"/blog"}>
-              <a>Blog</a>
+            {/* <Navlink to={"/myth-fact"}>
+              <a className="">Myth vs Fact</a>
+            </Navlink> */}
+            <Navlink to={"/cooking-science"}>
+              <a>Cooking Science</a>
             </Navlink>
           </ul>
         </div>
@@ -92,23 +97,38 @@ const Navbar = () => {
 
           <div className="px-6 ">
             <ul className="flex flex-col gap-1 text-[15px]">
-              <Navlink to={"/myth-fact"}>
+              <Navlink to={"/"}>
+                <a className="font-semibold" onClick={() => setIsOpen(false)}>
+                  Home
+                </a>
+              </Navlink>
+              <HealthCalculatorDropdown
+                mobile={true}
+                closeMenu={() => setIsOpen(false)}
+              />
+              <Navlink to={"/blog"}>
+                <a className="font-semibold" onClick={() => setIsOpen(false)}>
+                  Blog
+                </a>
+              </Navlink>
+              <Navlink to={"/food-safety"}>
+                <a className="font-semibold" onClick={() => setIsOpen(false)}>
+                  Food Safety
+                </a>
+              </Navlink>
+              {/* <Navlink to={"/myth-fact"}>
                 <a onClick={() => setIsOpen(false)}>Myth Vs Fact</a>
+              </Navlink> */}
+              <Navlink to={"/healthy-recipes"}>
+                <a className="font-semibold" onClick={() => setIsOpen(false)}>
+                  Healthy Recipes
+                </a>
               </Navlink>
 
               <Navlink to={"/cooking-science"}>
-                <a onClick={() => setIsOpen(false)}>Cooking Science</a>
-              </Navlink>
-
-              <Navlink to={"/food-safety"}>
-                <a onClick={() => setIsOpen(false)}>Food Safety</a>
-              </Navlink>
-
-              <Navlink to={"/healthy-recipes"}>
-                <a onClick={() => setIsOpen(false)}>Healthy Recipes</a>
-              </Navlink>
-              <Navlink to={"/blog"}>
-                <a onClick={() => setIsOpen(false)}>Blog</a>
+                <a className="font-semibold" onClick={() => setIsOpen(false)}>
+                  Cooking Science
+                </a>
               </Navlink>
             </ul>
 

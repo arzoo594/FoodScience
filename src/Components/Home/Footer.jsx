@@ -2,13 +2,13 @@ import { Link } from "react-router";
 import { FaFacebook, FaInstagramSquare, FaYoutube } from "react-icons/fa";
 import { AiFillTikTok } from "react-icons/ai";
 import { FaXTwitter } from "react-icons/fa6";
-
+import FooterLogo from "../../Components/FooterLogo/FooterLogo";
 const Footer = () => {
   return (
-    <footer className="mt-20 bg-black text-white">
+    <footer className=" bg-black text-white">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 py-12 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <h2 className="text-2xl font-bold">Food Science</h2>
+          <FooterLogo />
 
           <p className="mt-6 max-w-xs text-gray-300">
             An educational platform dedicated to helping people understand the

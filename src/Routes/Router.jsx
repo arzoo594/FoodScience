@@ -12,7 +12,13 @@ import PrivacyPolicy from "../Pages/PrivacyPolicy/PrivacyPolicy";
 import TermsOfUse from "../Pages/TermsOfUse/TermsOfUse";
 import Articles from "../Pages/Articles/Articles";
 import LearnNutrition from "../Pages/LearnNutrition/LearnNutrition";
-
+import AboutLayout from "../LayOuts/AboutLayout";
+import BmiCalculator from "../Components/BmiCalculator/BmiCalculator";
+import BmrCalculator from "../Components/BmrCalculator/BmrCalculator";
+import IdealWeight from "../Components/IdealWeight/IdealWeight";
+import DailyCalorieCalculator from "../Components/DailyCalorieCalculator/DailyCalorieCalculator";
+import DailyWaterIntake from "../Components/DailyWaterIntake/DailyWaterIntake";
+import ProteinIntake from "../Components/ProteinIntake/ProteinIntake";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -27,8 +33,36 @@ export const router = createBrowserRouter([
         element: <MythVsFact />,
       },
       {
+        path: "/health-calculator/bmi",
+        element: <BmiCalculator />,
+      },
+      {
+        path: "/health-calculator/bmr",
+        element: <BmrCalculator />,
+      },
+      {
+        path: "/health-calculator/ideal-weight",
+        element: <IdealWeight />,
+      },
+      {
+        path: "/health-calculator/daily-calorie-calculator",
+        element: <DailyCalorieCalculator />,
+      },
+      {
+        path: "/health-calculator/daily-water-intake",
+        element: <DailyWaterIntake />,
+      },
+      {
+        path: "/health-calculator/protein-intake",
+        element: <ProteinIntake />,
+      },
+      {
         path: "/cooking-science",
         element: <CookingScience />,
+      },
+      {
+        path: "/",
+        element: <Home />,
       },
       {
         path: "/food-safety",
@@ -41,10 +75,6 @@ export const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog />,
-      },
-      {
-        path: "/about",
-        element: <AboutUs />,
       },
 
       {
@@ -66,6 +96,16 @@ export const router = createBrowserRouter([
       {
         path: "/learn-nutrition",
         element: <LearnNutrition />,
+      },
+    ],
+  },
+  {
+    path: "/about",
+    element: <AboutLayout />,
+    children: [
+      {
+        index: true,
+        element: <AboutUs />,
       },
     ],
   },

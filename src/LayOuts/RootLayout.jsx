@@ -1,32 +1,23 @@
 import { Outlet } from "react-router";
 import Navbar from "../Shared/Navbar/Navbar";
 import Footer from "../Components/Home/Footer";
+import ScrollToTop from "../Components/ScrollToTop/ScrollToTop";
+import LoadingScreen from "../Components/LoadingScreen/LoadingScreen";
 
 const RootLayout = () => {
   return (
-    <div className="mx-auto  ">
+    <div className="mx-auto min-h-screen">
+      <ScrollToTop />
+      <LoadingScreen />
       <Navbar />
-      <main className="min-h-[calc(100vh-245px)] mx-auto px-6">
+
+      <main className="min-h-[calc(100vh-80px)] mx-auto">
         <Outlet />
-        <Footer />
       </main>
+
+      <Footer />
     </div>
   );
 };
 
 export default RootLayout;
-// import { Outlet } from "react-router";
-// import Navbar from "../Shared/Navbar/Navbar";
-
-// const RootLayout = () => {
-//   return (
-//     <div className="mx-auto  ">
-//       <Navbar />
-//       <main className="min-h-[calc(100vh-245px)] w-1/121 mx-auto px-6">
-//         <Outlet />
-//       </main>
-//     </div>
-//   );
-// };
-
-// export default RootLayout;
